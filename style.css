@@ -45,10 +45,21 @@ h1 {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 15px;
+}
+
+#export {
+    background-color: #007bff;
 }
 
 .form button:hover {
     background-color: #218838;
+}
+
+.btn-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 .table-container {

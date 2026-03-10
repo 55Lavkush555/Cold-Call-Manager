@@ -26,7 +26,21 @@ function deleteCall(index) {
     location.reload();
 }
 
+function exportData() {
+    const csvContent = "data:text/csv;charset=utf-8," 
+        + data.map(call => `${call.name},${call.phone},${call.notes}`).join("\n");
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "cold_calls_data.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+
 document.getElementById('submit').addEventListener('click', addCall)
+document.getElementById('export').addEventListener('click', exportData)
 
 document.getElementsByTagName('tbody')[0].innerHTML = data.map(call => `<tr>
     <td>${call.name}</td>
