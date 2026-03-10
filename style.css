@@ -44,7 +44,7 @@ h1 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    width: 100px;
     margin-bottom: 15px;
 }
 
@@ -60,6 +60,7 @@ h1 {
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
+    /* justify-content: space-around; */
 }
 
 .table-container {
@@ -71,10 +72,16 @@ h1 {
 }
 
 table {
-    width: 100%;
+    min-width: 450px;
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 450px) {
+    table {
+        width: 100%;
+    }
 }
 
 table th, table td {
@@ -90,4 +97,20 @@ table th, table td {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.status {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.status label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status input[type="radio"] {
+    margin: 0;
 }

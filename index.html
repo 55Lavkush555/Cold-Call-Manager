@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cold Calls Manager</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="form">
         <h1>Cold Calls Manager</h1>
-        <form action="">
+        <!-- <form action=""> -->
             <input type="text" placeholder="Business name" id="name">
             <input type="text" placeholder="Phone number" id="phone">
             <input type="text" placeholder="Notes" id="notes">
+
+            <div class="status">
+                <label><input type="radio" name="status" value="Not Answer"> Not Answer</label>
+                <label><input type="radio" name="status" value="Call Later"> Call Later</label>
+                <label><input type="radio" name="status" value="Demo Sent"> Demo Sent</label>
+            </div>
+
             <div class="btn-container">
                 <button type="submit" id="submit">Add</button>
                 <button type="submit" id="export">Export Data</button>
             </div>
-        </form>
+        <!-- </form> -->
     </div>
 
     <div class="table-container">
@@ -26,6 +35,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Phone Number</th>
+                    <th>Status</th>
                     <th>Notes</th>
                     <th>Delete</th>
                 </tr>
@@ -37,4 +47,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
