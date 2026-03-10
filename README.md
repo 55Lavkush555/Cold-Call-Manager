@@ -24,16 +24,6 @@ All data is stored in the browser using **LocalStorage**, so no backend is requi
 
 ---
 
-## 📷 Preview
-
-Add a screenshot of the application here.
-
-Example:
-
-![Cold Call Manager Preview](preview.png)
-
----
-
 ## 🛠️ Built With
 
 - HTML  
